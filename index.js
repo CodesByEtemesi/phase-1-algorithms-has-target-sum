@@ -1,5 +1,23 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  const seenNumbers = new Set();
+
+   // Iterate through the array
+   for (let num of arr) {
+    // Calculate the difference between the target and the current number
+    const difference = target - num;
+
+       // Check if the difference is in the set of seen numbers
+       if (seenNumbers.has(difference)) {
+        // If it is, we found a pair that adds up to the target
+        return true;
+      }
+  
+      // Otherwise, add the current number to the set
+      seenNumbers.add(num);
+    }
+    // If no pair is found, return false
+  return false;
 }
 
 /* 
